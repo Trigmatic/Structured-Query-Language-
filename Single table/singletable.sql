@@ -26,22 +26,19 @@ SET time_zone = "+00:00";
 -- Table structure for table `ages`
 --
 
-CREATE TABLE `ages` (
-  `name` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `age` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
+CREATE TABLE Ages ( 
+  name VARCHAR(128), 
+  age INTEGER
+)
 --
 -- Dumping data for table `ages`
 --
 
-INSERT INTO `ages` (`name`, `age`) VALUES
-('Mira', 17),
-('Krystal', 23),
-('Susan', 26),
-('Cambell', 35),
-('Aleeyah', 19),
-('Leaya', 35);
+DELETE FROM Ages;
+INSERT INTO Ages (name, age) VALUES ('Khaya', 21);
+INSERT INTO Ages (name, age) VALUES ('Ruqaiya', 31);
+INSERT INTO Ages (name, age) VALUES ('Gavin', 28);
+INSERT INTO Ages (name, age) VALUES ('Samiha', 27);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
