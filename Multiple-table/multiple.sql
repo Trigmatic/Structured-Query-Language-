@@ -1,7 +1,3 @@
-
-
-
-
 CREATE TABLE Artist (
   artist_id INTEGER NOT NULL AUTO_INCREMENT,
   name VARCHAR(255),
@@ -60,12 +56,14 @@ INSERT INTO Artist ( name) VALUES ('Calvin Harris');
 INSERT INTO Artist ( name) VALUES ('Beyonce');
 
 
+--- Insert data into Genre
 
 INSERT INTO Genre ( name) VALUES ('Electro House');
 INSERT INTO Genre ( name) VALUES ('Pop');
 INSERT INTO Genre ( name) VALUES ('R&B');
 
 
+--- Insert data into Album
 
 INSERT INTO Album ( title, artist_id) VALUES ('Confessions on a Dance Floor', 1);
 INSERT INTO Album ( title, artist_id) VALUES ('18 Months', 2);
@@ -75,6 +73,7 @@ INSERT INTO Album ( title, artist_id) VALUES ('Lemonade', 3);
 
 
 
+--- Insert data into Track
 
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES ('Hung Up', 336, 5, 0, 1, 2);
 INSERT INTO Track (title,len, rating, count, album_id, genre_id) VALUES ('Sorry', 283,5, 0, 1, 2);
@@ -96,6 +95,7 @@ INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Format
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Well', 232, 5, 0, 5, 3);
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Hold Up',221, 5, 0, 5, 3);
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Freedom', 249, 5, 0, 5, 3);
+
 
 
 
