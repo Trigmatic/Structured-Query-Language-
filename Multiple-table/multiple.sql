@@ -100,6 +100,10 @@ INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Hold U
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Freedom', 249, 5, 0, 5, 3);
 
 
-
+---- Retrieve all genres for a particular artist
 
 SELECT DISTINCT Artist.name, Genre.name FROM Track JOIN Genre JOIN Album JOIN Artist ON Track.genre_id= Genre.genre_id AND Track.album_id= Album.album_id AND Album.artist_id = Artist.artist_id WHERE Artist.name = 'Madonna'
+
+--- Retrieve all data joined up sorted in ascending order by the album title
+
+SELECT Track.title, Artist.name, Album.title, Genre.name FROM Track JOIN Album JOIN Artist ON Track.genre_id = Genre.genre_id AND Track.album_id = Album.album_id AND Album.artist_id = Artist.artist_id ORDER BY Album.title
