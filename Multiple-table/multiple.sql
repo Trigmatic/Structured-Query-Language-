@@ -1,3 +1,6 @@
+---- Creating a multiple table
+
+
 CREATE TABLE Artist (
   artist_id INTEGER NOT NULL AUTO_INCREMENT,
   name VARCHAR(255),
