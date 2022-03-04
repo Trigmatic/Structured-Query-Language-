@@ -59,14 +59,14 @@ INSERT INTO Artist ( name) VALUES ('Calvin Harris');
 INSERT INTO Artist ( name) VALUES ('Beyonce');
 
 
---- Insert data into Genre
+---Insert data into Genre---
 
 INSERT INTO Genre ( name) VALUES ('Electro House');
 INSERT INTO Genre ( name) VALUES ('Pop');
 INSERT INTO Genre ( name) VALUES ('R&B');
 
 
---- Insert data into Album
+---Insert data into Album---
 
 INSERT INTO Album ( title, artist_id) VALUES ('Confessions on a Dance Floor', 1);
 INSERT INTO Album ( title, artist_id) VALUES ('18 Months', 2);
@@ -76,7 +76,7 @@ INSERT INTO Album ( title, artist_id) VALUES ('Lemonade', 3);
 
 
 
---- Insert data into Track
+---Insert data into Track---
 
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES ('Hung Up', 336, 5, 0, 1, 2);
 INSERT INTO Track (title,len, rating, count, album_id, genre_id) VALUES ('Sorry', 283,5, 0, 1, 2);
@@ -100,10 +100,10 @@ INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Hold U
 INSERT INTO Track (title, len, rating, count, album_id, genre_id) VALUES('Freedom', 249, 5, 0, 5, 3);
 
 
----- Retrieve all genres for a particular artist
+----Retrieve all genres for a particular artist---
 
 SELECT DISTINCT Artist.name, Genre.name FROM Track JOIN Genre JOIN Album JOIN Artist ON Track.genre_id= Genre.genre_id AND Track.album_id= Album.album_id AND Album.artist_id = Artist.artist_id WHERE Artist.name = 'Madonna'
 
---- Retrieve all data joined up sorted in ascending order by the album title
+---Retrieve all data joined up sorted in ascending order by the album title---
 
 SELECT Track.title, Artist.name, Album.title, Genre.name FROM Track JOIN Album JOIN Artist ON Track.genre_id = Genre.genre_id AND Track.album_id = Album.album_id AND Album.artist_id = Artist.artist_id ORDER BY Album.title
